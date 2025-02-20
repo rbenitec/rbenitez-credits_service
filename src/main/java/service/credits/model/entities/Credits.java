@@ -14,7 +14,7 @@ import java.util.List;
 @Document(collection = "credits")
 public class Credits {
     @Id
-    private Integer id;
+    private String id;
     private String creditType;
     private String clientId;
     private Double amount;

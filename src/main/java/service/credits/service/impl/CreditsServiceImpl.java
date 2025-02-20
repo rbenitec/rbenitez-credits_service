@@ -22,6 +22,7 @@ public class CreditsServiceImpl implements CreditsService {
     public Mono<CreditsResponseDto> save(Mono<CreditsRequestDto> requestDto) {
         return requestDto
                 .map(request -> Credits.builder()
+                        .id(Utility.generatedIdCredit())
                         .creditType(request.getCreditType())
                         .amount(request.getAmount())
                         .termMonths(request.getTermMonths())

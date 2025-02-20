@@ -19,8 +19,8 @@ public class Utility {
      *
      * @return Número de cuenta como String.
      */
-    public static String generarNumeroCuenta() {
-        return generarNumeroAleatorio(LONGITUD_CUENTA);
+    public static String generatedIdCredit() {
+        return "AC" + java.util.UUID.randomUUID();
     }
 
     /**

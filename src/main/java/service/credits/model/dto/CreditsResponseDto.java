@@ -16,7 +16,7 @@ import lombok.ToString;
 @ToString
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class CreditsResponseDto {
-    private Integer id;
+    private String id;
     private String creditType;
     private String clientId;
     private Double amount;
