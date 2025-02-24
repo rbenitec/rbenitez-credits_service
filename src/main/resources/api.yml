@@ -1,7 +1,7 @@
 openapi: 3.0.2
 info:
-  title: MIC Accounts service
-  description: Mic openning accounts banking
+  title: MIC Credits service
+  description: Mic openning Credits banking
   contact:
     name: Roberto Benitez
     email: rbenitez_20_95@hotmail.com
@@ -10,7 +10,7 @@ servers:
   - url: http://localhost:8082
     description: Desarrollo
 paths:
-  /accounts:
+  /Credits:
     post:
       tags:
         - created
@@ -50,7 +50,7 @@ paths:
           $ref: "#/components/responses/InternalServerErrorStatus"
         '504':
           $ref: "#/components/responses/GatewayTimeoutErrorStatus"
-  /accounts/{id}:
+  /Credits/{id}:
     get:
       tags:
         - obtener
