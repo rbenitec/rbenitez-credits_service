@@ -11,12 +11,12 @@ import java.util.List;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Document(collection = "credits")
+@Document(collection = "credit")
 public class Credits {
     @Id
     private String id;
     private String creditType;
-    private String clientId;
+    private String customerId;
     private Double amount;
     private Double interestRate;
     private Integer termMonths;

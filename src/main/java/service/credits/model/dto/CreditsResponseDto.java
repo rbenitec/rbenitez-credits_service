@@ -18,7 +18,7 @@ import lombok.ToString;
 public class CreditsResponseDto {
     private String id;
     private String creditType;
-    private String clientId;
+    private String customerId;
     private Double amount;
     private Double interestRate;
     private Integer termMonths;

@@ -28,7 +28,7 @@ public class CreditsController {
 
     @PostMapping()  // Save credits
     public Mono<ResponseEntity<CreditsResponseDto>> saveCredit(@RequestBody Mono<CreditsRequestDto> creditsRequest) {
-        return creditsService.save(creditsRequest)
+        return creditsService.saveCredit(creditsRequest)
                 .map(ResponseEntity.status(HttpStatus.OK)::body)
                 .defaultIfEmpty(ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build());
     }
@@ -44,7 +44,7 @@ public class CreditsController {
 
     @PutMapping("/{creditId}")  // Actualizar credito
     public Mono<ResponseEntity<CreditsResponseDto>> updateCredit(@PathVariable("creditId") String creditId, @RequestBody Mono<UpdateCreditRequestDto> updateCreditRequestDto) {
-        return creditsService.update(updateCreditRequestDto, creditId)
+        return creditsService.updateCredit(updateCreditRequestDto, creditId)
                 .map(ResponseEntity.status(HttpStatus.OK)::body)
                 .defaultIfEmpty(ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build());
     }
